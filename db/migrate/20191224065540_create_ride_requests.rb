@@ -5,7 +5,6 @@ class CreateRideRequests < ActiveRecord::Migration[5.2]
       t.string :status
       t.references :user
       t.references :driver
-
       t.timestamps
     end
   end

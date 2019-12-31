@@ -1,0 +1,16 @@
+%center 
+  %h2 Rides
+
+%table{border:2 , align:'center'}
+  %tr
+    %td Date
+    %td Time
+    %td Location
+  -@ride.each do |r|  
+    %tr
+      %td= r.date
+      %td= r.time.strftime("%I:%M:%S %p")
+      %td= r.location
+%center
+  %h3
+    To add new Ride #{link_to "Add Ride", new_ride_path}

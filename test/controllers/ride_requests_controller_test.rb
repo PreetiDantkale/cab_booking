@@ -1,8 +1,7 @@
 require 'test_helper'
 
-class UserTest < ActiveSupport::TestCase
+class RideRequestsControllerTest < ActionDispatch::IntegrationTest
   # test "the truth" do
   #   assert true
   # end
-  
 end

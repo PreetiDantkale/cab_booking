@@ -1,0 +1,21 @@
+%center 
+  %h2 Users
+
+%table{border:2 , align:'center'}
+  %tr
+    %td First Name
+    %td Last Name
+    %td Contact Number
+    %td Email ID
+    %td Password
+  -@user.each do |u|  
+    %tr
+      %td= u.first_name
+      %td= u.last_name
+      %td= u.contact_number
+      %td= u.email_id
+      %td= u.password
+
+%center
+  %h3
+    To add new User #{link_to "Add User", new_user_path}

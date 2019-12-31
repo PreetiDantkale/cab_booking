@@ -1,0 +1,15 @@
+%center 
+  %h2 Ride Requests
+
+%table{border:2 , align:'center'}
+  %tr
+    %td Destination
+    %td Status
+  -@ride_request.each do |r|  
+    %tr
+      %td= r.destination
+      %td= r.status
+
+%center
+  %h3
+    To add new Ride Request #{link_to "Ride Request", new_ride_request_path}

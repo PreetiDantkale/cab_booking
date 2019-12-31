@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_25_141139) do
+ActiveRecord::Schema.define(version: 2019_12_30_100725) do
 
   create_table "cabs", force: :cascade do |t|
     t.string "registration_number"
@@ -32,10 +32,10 @@ ActiveRecord::Schema.define(version: 2019_12_25_141139) do
     t.string "destination"
     t.string "status"
     t.integer "user_id"
-    t.integer "driver_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["driver_id"], name: "index_ride_requests_on_driver_id"
+    t.integer "ride_id"
+    t.index ["ride_id"], name: "index_ride_requests_on_ride_id"
     t.index ["user_id"], name: "index_ride_requests_on_user_id"
   end
 
@@ -49,6 +49,11 @@ ActiveRecord::Schema.define(version: 2019_12_25_141139) do
     t.datetime "updated_at", null: false
     t.index ["cab_id"], name: "index_rides_on_cab_id"
     t.index ["driver_id"], name: "index_rides_on_driver_id"
+  end
+
+  create_table "roles", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|

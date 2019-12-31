@@ -1,0 +1,24 @@
+%h2 New Ride
+= form_with model: @ride do |f|
+  = label_tag(:date, "Date")
+  %br
+  = f.text_field :date
+  %br
+  = label_tag(:time, "Time")
+  %br
+  = f.text_field :time
+  %br
+  = label_tag(:location, "Location")
+  %br
+  = f.text_field :location
+  %br
+  = label_tag(:cab_id, "Cab ID")
+  %br
+  = f.text_field :cab_id
+  %br
+  = label_tag(:driver_id, "Driver ID")
+  %br
+  = f.text_field :driver_id 
+  %br
+  = f.submit "Create"
+  
