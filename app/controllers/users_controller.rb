@@ -13,9 +13,18 @@ class UsersController < ApplicationController
       render :new
     end
   end
+
   
-  def index
+
+  
+  def index  
     @user = User.all
+    render json: @user
+
+   # respond_to do |format|
+   #    format.html
+   #    format.json { render :json => @user.as_json  }
+   #  end
   end
 
   def user_parameters

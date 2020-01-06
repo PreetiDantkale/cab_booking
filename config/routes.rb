@@ -3,4 +3,6 @@ Rails.application.routes.draw do
   resources :rides 
   resources :ride_requests
   resources :users
+
+  mount Raddocs::App => "/docs"
 end
