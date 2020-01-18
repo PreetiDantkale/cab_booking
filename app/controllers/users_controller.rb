@@ -6,7 +6,7 @@ class UsersController < ApplicationController
 
   def create
     #User.create(first_name: params[:first_name] , last_name: params[:last_name] , contact_number: params[:contact_number] , email_id: params[:email_id] , password:  params[:password]  )
-    @user = User.new(user_parameters)    
+    @user = User.new(user_parameters)
     if @user.save!
       redirect_to users_path
     else
@@ -14,12 +14,9 @@ class UsersController < ApplicationController
     end
   end
 
-  
-
-  
-  def index  
+  def index
     @user = User.all
-    render json: @user
+    #render json: @user
 
    # respond_to do |format|
    #    format.html

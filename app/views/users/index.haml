@@ -1,4 +1,4 @@
-%center 
+%center
   %h2 Users
 
 %table{border:2 , align:'center'}
@@ -8,11 +8,11 @@
     %td Contact Number
     %td Email ID
     %td Password
-  -@user.each do |u|  
+  -@user.each do |u|
     %tr
       %td= u.first_name
       %td= u.last_name
       %td= u.contact_number
       %td= u.email_id
       %td= u.password
-
+%button{onclick: "sum()" } Addition

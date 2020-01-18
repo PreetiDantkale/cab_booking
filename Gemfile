@@ -83,3 +83,5 @@ gem 'raddocs'
 gem 'faker', '~> 1.6', '>= 1.6.6'
 
 gem 'myname', path: "/home/preeti/Documents/Internship/MyNameGem"
+
+gem 'cancancan', '~> 1.15'
